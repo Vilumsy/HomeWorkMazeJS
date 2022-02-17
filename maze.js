@@ -145,7 +145,8 @@ var test = (function() {
             }
         }catch(TypeError){
             //catches going outside of the mazeArray
-            //very bad style, I know...
+            //Catches keyboard event listener error(only when executed, then it goes well)
+            //bad style, I know...
         }
     
     }
