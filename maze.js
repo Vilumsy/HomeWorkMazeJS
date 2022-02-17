@@ -1,5 +1,5 @@
 (function() {
-    let mazeArray = [
+    const mazeArray = [
         [1, -1, 1, 1, 1, 1],
         [1, 0, 1, 0, 0, 1],
         [1, 0, 0, 0, 0, 1],
@@ -8,8 +8,8 @@
         [1, 1, 1, 1, 1, 1]
     ];
     
-    let canvas = document.getElementById("myCanvas");
-    let ctx = canvas.getContext("2d");
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
     let currentPos = {row: 0, column: 0};
     
     function loopArray(){
@@ -48,7 +48,7 @@
     
     function startOver(){
 
-        let txt;
+        
         if (confirm("Do you want to start again?")) {
             mazeArray[currentPos.row][currentPos.column]=2;
             mazeArray[0][1]=-1;
@@ -63,7 +63,6 @@
     
     function move(event)
     {   
-        loopArray();
         try{
             switch(event.keyCode){
                 case 37: 
