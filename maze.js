@@ -1,5 +1,5 @@
 (function() {
-    var mazeArray = [
+    let mazeArray = [
         [1, -1, 1, 1, 1, 1],
         [1, 0, 1, 0, 0, 1],
         [1, 0, 0, 0, 0, 1],
@@ -8,9 +8,9 @@
         [1, 1, 1, 1, 1, 1]
     ];
     
-    var canvas = document.getElementById("myCanvas");
-    var ctx = canvas.getContext("2d");
-    var currentPos = {row: 0, column: 0};
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext("2d");
+    let currentPos = {row: 0, column: 0};
     
     function loopArray(){
     
@@ -48,7 +48,7 @@
     
     function startOver(){
 
-        var txt;
+        let txt;
         if (confirm("Do you want to start again?")) {
             mazeArray[currentPos.row][currentPos.column]=2;
             mazeArray[0][1]=-1;
