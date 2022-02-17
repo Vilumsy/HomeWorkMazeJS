@@ -1,4 +1,4 @@
-var test = (function() {
+(function() {
     var mazeArray = [
         [1, -1, 1, 1, 1, 1],
         [1, 0, 1, 0, 0, 1],
@@ -20,7 +20,7 @@ var test = (function() {
         })
       })
     }
-    // loopArray();
+     loopArray();
     
     function drawRectangles(value, column, row){
     
@@ -143,10 +143,14 @@ var test = (function() {
                 default:
                     return;
             }
-        }catch(TypeError){
-            //catches going outside of the mazeArray
-            //Catches keyboard event listener error(only when executed, then it goes well)
-            //bad style, I know...
+        }catch(e) {
+            if (e instanceof TypeError) {
+                alert("Cant go any higher!");
+            }
+            else{
+                logMyError(e);
+            }
+            
         }
     
     }
@@ -161,6 +165,5 @@ var test = (function() {
 
 
 })();
-test.movingfunc();
 
 
